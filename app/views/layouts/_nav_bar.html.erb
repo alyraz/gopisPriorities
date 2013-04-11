@@ -1,0 +1,10 @@
+<div class="nav-bar">
+  <a href='/home'> Gopi's Priorities </a>
+  <%# if current_user %>
+    <a href="/users/<%#=@current_user.id%>"> Profile </a>
+    <a href="/logout"> Logout </a>
+    <img src="<%#= current_user.photo_src%>">
+  <%# else %>
+    <a id='goog-signin-btn' href="/google/auth"> Sign in with Google </a>
+  <%# end %>
+</div>
