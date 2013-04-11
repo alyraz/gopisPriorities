@@ -1,0 +1,2 @@
+class HomeScreenController < ApplicationController
+end
