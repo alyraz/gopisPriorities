@@ -1,4 +1,4 @@
-module UserHelper
+module UsersHelper
 
   def current_user
     #FakeCurrentUser.new
@@ -19,5 +19,4 @@ module UserHelper
     end
 
   end
-
 end
