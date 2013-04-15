@@ -1,7 +1,7 @@
-module HomeScreenHelper
+module UserHelper
 
   def current_user
-    FakeCurrentUser.new
+    #FakeCurrentUser.new
   end
 
   class FakeCurrentUser
