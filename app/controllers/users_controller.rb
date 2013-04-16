@@ -14,4 +14,12 @@ class UsersController < ApplicationController
   def codecallback
     obtain_access_token
   end
+
+  def logout
+    # session.destroy
+    reset_session
+    # debugger
+    puts '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    redirect_to '/'
+  end
 end

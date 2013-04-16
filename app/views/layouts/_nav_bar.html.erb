@@ -2,8 +2,8 @@
   <%= link_to "Gopi's Priorities", root_path %>
   <% if current_user %>
     <%= link_to "My Checkins", checkins_path %>
-    <%= link_to "Logout", root_path %>
-    <img src="<%= current_user.photo_src %>">
+    <%= link_to "Logout", logout_path %>
+    <img src="<%= @current_user.photo_src %>">
   <% else %>
     <%= link_to "Sign in with Google", new_user_path %>
   <% end %>
