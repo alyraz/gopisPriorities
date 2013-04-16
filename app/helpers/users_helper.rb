@@ -2,6 +2,7 @@ module UsersHelper
   require "net/http"
 
   def current_user
+    User.find(session[:user_id]) if session[:user_id]
   end
 
   def obtain_auth_code
@@ -24,7 +25,6 @@ module UsersHelper
     res = http.request(req).body
     access_token = JSON.parse(res)["access_token"]
     api_call(access_token)
-    redirect_to "/"
   end
 
   def api_call(access_token)
@@ -35,11 +35,25 @@ module UsersHelper
     request = Net::HTTP::Get.new(uri.request_uri)
     res = http.request(request)
     user_info = JSON.parse(res.body)
-    name = user_info["name"]
-    p "!!!!!!!!!!!!!!!!!#{name}"
+    create_user(user_info)
   end
 
+  def create_user(user_info)
+    user = User.new name:      user_info["name"],
+                    photo_src: user_info["picture"]
+    if user.save!
+      authenticate(user)
+      redirect_to '/'
+    else
+      #handle errors
+    end
+  end
 
+  def authenticate(user)
+    session[:user_id]   = user.id
+    session[:user_name] = user.name
+    session[:photo_src] = user.photo_src
+  end
 
   def post_params(auth_code)
     { "code" => auth_code,
