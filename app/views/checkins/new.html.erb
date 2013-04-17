@@ -5,35 +5,25 @@
 </div>
 
 <form id="checkin-form" action="/#">
-  <section class='priority'>
-    1. Sleep <div id="sleep" class="slider"></div>
-  </section>
-  <section class='priority'>
-    2. Nutrition <div id="nutrition" class="slider"></div>
-  </section>
-  <section class='priority'>
-    3. Exercise <div id="exercise" class="slider"></div>
-   </section>
-   <section class='priority'>
-    4. Meditation <div id="meditation" class="slider"></div>
-  </section>
-   <section class='priority'>
-    5. Love <div id="love" class="slider"></div>
-  </section>
-   <section class='priority'>
-    6. Stuff <div id="stuff" class="slider"></div>
-  </section>
-  <section class='priority'>
-    7. Work <div id="work" class="slider"></div>
-  </section>
-  <section class='priority'>
-    8. Passion <div id="passion" class="slider"></div>
-  </section>
-  <section class='priority'>
-    9. Growth <div id="growth" class="slider"></div>
-  </section>
-  <section class='priority'>
-    10. Service <div id="service" class="slider"></div>
-  </section>
+  <% @priorities.each_with_index do |priority, i|%> 
+    <section class='priority'>
+      <%= i+1 %>. <%= priority.capitalize %> <div id="<%= priority %>" class="slider"></div>
+    </section>
+  <% end %>
   <input id='submit-btn' type='submit' value='Create'>
 </form>
+
+<script>
+var priorities = {
+        sleep:      0,
+        nutrition:  0,
+        exercise:   0,
+        meditation: 0,
+        love:       0,
+        stuff:      0,
+        work:       0,
+        passion:    0,
+        growth:     0,
+        service:    0
+    };
+</script>
