@@ -12,6 +12,7 @@ class CreateCheckins < ActiveRecord::Migration
       t.integer :passion
       t.integer :growth
       t.integer :service
+      
       t.timestamps
     end
   end
