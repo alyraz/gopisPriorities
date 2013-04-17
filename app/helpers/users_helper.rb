@@ -43,9 +43,12 @@ module UsersHelper
   end
 
   def create_user(user_info)
-    
-    user = User.new name:      user_info["name"],
-                    photo_src: user_info["picture"]
+    google_id = user_info["id"]
+    user = User.find_or_create_by_google_id( 
+                    google_id,
+                    :name =>  user_info["name"],
+                    :photo_src => user_info["picture"]
+    )
     if user.save!
       authenticate(user)
       redirect_to '/'

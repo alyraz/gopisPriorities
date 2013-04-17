@@ -12,3 +12,4 @@
 
 == References
 * http://www.infoq.com/presentations/A-Tale-of-Three-Trees
+* http://37signals.com/svn/posts/3159-testing-like-the-tsa
