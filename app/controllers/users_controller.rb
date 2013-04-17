@@ -16,10 +16,7 @@ class UsersController < ApplicationController
   end
 
   def logout
-    # session.destroy
     reset_session
-    # debugger
-    puts '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-    redirect_to '/'
+    redirect_to root_path
   end
 end
