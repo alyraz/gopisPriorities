@@ -1,3 +1,3 @@
 class Checkin < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :user_id, :sleep, :nutrition, :exercise, :meditation, :love, :stuff, :work, :passion, :growth, :service
 end
