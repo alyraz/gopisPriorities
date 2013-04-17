@@ -7,7 +7,6 @@ class UsersController < ApplicationController
       "redirect_uri=http://localhost:3000/codecallback&",
       "scope=https://www.googleapis.com/auth/userinfo.profile"
       ].join()
-    puts "!!!!!!!!!!!!#{url}"
     redirect_to url
   end
 

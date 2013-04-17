@@ -6,6 +6,8 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 gem 'debugger'
+gem 'rspec-rails'
+gem "nyan-cat-formatter"
 
 
 # Gems used only for assets and not required

@@ -43,6 +43,7 @@ module UsersHelper
   end
 
   def create_user(user_info)
+    User.find_by_name(name)
     user = User.new name:      user_info["name"],
                     photo_src: user_info["picture"]
     if user.save!
