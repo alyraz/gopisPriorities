@@ -10,3 +10,5 @@
 1.
 
 
+== References
+* http://www.infoq.com/presentations/A-Tale-of-Three-Trees
