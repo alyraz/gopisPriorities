@@ -1,4 +1,3 @@
 class User < ActiveRecord::Base
-  has_many :checkins
-
+  attr_accessible :name, :photo_src
 end

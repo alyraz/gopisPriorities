@@ -11,29 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415191120) do
+ActiveRecord::Schema.define(:version => 20130415214117) do
 
   create_table "checkins", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "sleep"
-    t.integer  "exercise"
-    t.integer  "nutrition"
-    t.integer  "meditation"
-    t.integer  "love"
-    t.integer  "stuff"
-    t.integer  "work"
-    t.integer  "passion"
-    t.integer  "growth"
-    t.integer  "service"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "photo_src"
-    t.string   "password"
+    t.string   "name",       :null => false
+    t.string   "photo_src",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
