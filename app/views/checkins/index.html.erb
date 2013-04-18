@@ -1,0 +1,53 @@
+<table class="checkins" border="1">
+  <thead class="column-headers">
+    <tr>
+      <td> Date </td>
+      <td> Sleep </td>
+      <td> Nutrition </td>
+      <td> Exercise </td>
+      <td> Meditation </td>
+      <td> Love </td>
+      <td> Stuff </td>
+      <td> Work </td>
+      <td> Passion </td>
+      <td> Growth </td>
+      <td> Service </td>
+    </tr>
+  <tbody>
+    <% @checkins.each do |checkin| %>
+      <tr>
+        <td><%= checkin[:created_at]  %></td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:sleep].to_f / 100 %>">
+          <%= checkin[:sleep] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:nutrition].to_f / 100 %>">
+          <%= checkin[:nutrition] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:exercise].to_f / 100 %>">
+          <%= checkin[:exercise] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:meditation].to_f / 100 %>">
+          <%= checkin[:meditation] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:love].to_f / 100 %>">
+          <%= checkin[:love] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:stuff].to_f / 100 %>">
+          <%= checkin[:stuff] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:work].to_f / 100 %>">
+          <%= checkin[:work] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:passion].to_f / 100 %>">
+          <%= checkin[:passion] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:growth].to_f / 100 %>">
+          <%= checkin[:growth] %>
+        </td>
+        <td bgcolor="purple" style="opacity:<%= checkin[:service].to_f / 100 %>">
+          <%= checkin[:service] %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

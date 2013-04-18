@@ -15,7 +15,7 @@ $(document).ready(function(){
     $("#checkin-form").submit(function(e){
         e.preventDefault();
         $.post('/checkins', priorities).done(function(checkin_id){
-           //window.location = "http://localhost:3000/checkins/" + checkin_id
+           window.location = "http://localhost:3000/checkins"
          });
 
     });

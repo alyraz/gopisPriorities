@@ -4,8 +4,8 @@
   <% end %>
 </div>
 
-<form id="checkin-form" action="/#">
-  <% @priorities.each_with_index do |priority, i|%> 
+<form id="checkin-form" action="#">
+  <% @priorities.each_with_index do |priority, i|%>
     <section class='priority'>
       <%= i+1 %>. <%= priority.capitalize %> <div id="<%= priority %>" class="slider"></div>
     </section>
