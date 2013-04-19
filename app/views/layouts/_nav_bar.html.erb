@@ -5,6 +5,6 @@
     <%= link_to "Logout", logout_path %>
     <img src="<%= @current_user.photo_src %>">
   <% else %>
-    <%= link_to "Sign in with Google", new_user_path %>
+    <a href='/users/new' id='goog-signin-btn'> Sign in with Google </a>
   <% end %>
 </div>

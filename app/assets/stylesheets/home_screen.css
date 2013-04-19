@@ -6,12 +6,9 @@
 body {
   font-family: "PT Sans",sans-serif;
   color: #555;
- /* background: #C1F8F8;*/
-
 }
 
 .container {
-   /* background: #80c3be; - why is my container not all encompassing?*/
     margin: 0px auto;
     height: 100%;
     width: 90%;
@@ -20,6 +17,8 @@ body {
     position: relative;
     font-size: 22px;
 }
+
+/* --------------- NAV-BAR ---------- */
 
 .nav-bar {
   width: 100%;
@@ -103,45 +102,6 @@ body {
   border-radius: 4px;
   position: relative;
   margin: auto;
-
 }
 
-
-/* ------------------------ LOGINSIGNUP -------------------- */
-.login-signup {
-  width: 900px;
-  margin: auto;
-}
-
-#login-signup fieldset {
-  background-color: #33CEC3;
-  border: 1px solid #dcdcdc;
-  color: white;
-  float: left;
-  padding: 20px;
-  margin: 16px;
-  text-align: right;
-  width: 300px;
-  box-shadow: 0px 2px 8px 0px #000000;
-}
-
-#login-signup #login {
-  padding-top: 40px;
-  height: 172px;
-}
-
-#login-signup legend {
-  width: 90px;
-  background-color: #00877d;
-  border: 1px solid #dcdcdc;
-  padding: 5px 20px;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-#error-explanation {
-  margin-top: 10px;
-  text-align: left;
-  color: #a00;
-}
 
