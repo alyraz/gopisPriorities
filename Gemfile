@@ -6,7 +6,6 @@ gem 'thin'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'debugger'
 gem 'rspec-rails'
 gem "nyan-cat-formatter"
