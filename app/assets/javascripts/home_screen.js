@@ -5,25 +5,29 @@
 $(document).ready(function(){
 
     var priorities = {
-        sleep:      0,
-        nutrition:  0,
-        exercise:   0,
-        meditation: 0,
-        love:       0,
-        stuff:      0,
-        work:       0,
-        passion:    0,
-        growth:     0,
-        service:    0
+        sleep:      50,
+        nutrition:  50,
+        exercise:   50,
+        meditation: 50,
+        love:       50,
+        stuff:      50,
+        work:       50,
+        passion:    50,
+        growth:     50,
+        service:    50
     };
 
     //attaches a jQuery UI slider to each div with .slider class
-    $(".slider").slider();
+    $(".slider").slider({ value: 50 });
     //when slider changes, set appropriate attribute of prioritities obj to slider value
     $(".slider").slider( {
         change: function( event, ui ) {
-            var id = $(this).attr('id');
-            priorities[id] = ui.value
+            if ($('#welcome h3').html()){
+                var id = $(this).attr('id');
+                priorities[id] = ui.value
+            } else {
+                alert("Please sign in to create your checkin.")
+            }
         }
     });
 
