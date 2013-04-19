@@ -36,7 +36,7 @@ $(document).ready(function(){
         //check if there is a current user
         if ($('#welcome h3').html()){
             $.post('/checkins', priorities).done(function(checkin_id){
-                window.location = "http://localhost:3000/checkins"
+                window.location = "/checkins"
             });
         } else {
             alert("Please sign in to create your checkin.")

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     url = ["https://accounts.google.com/o/oauth2/auth?",
       "response_type=code&",
       "client_id=184834102114.apps.googleusercontent.com&",
-      "redirect_uri=http://localhost:3000/codecallback&",
+      "redirect_uri=http://#{request.host_with_port}/codecallback&",
       "scope=https://www.googleapis.com/auth/userinfo.profile"
       ].join()
     redirect_to url

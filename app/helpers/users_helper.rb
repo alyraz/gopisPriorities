@@ -13,7 +13,7 @@ module UsersHelper
     url = URI.parse( ["https://accounts.google.com/o/oauth2/auth?",
       "response_type=code&",
       "client_id=184834102114.apps.googleusercontent.com&",
-      "redirect_uri=http://localhost:3000/codecallback&",
+      "redirect_uri=http://#{request.host_with_port}/codecallback&",
       "scope=https://www.googleapis.com/auth/userinfo.profile"].join()
       )
     Net::HTTP::Get.new(url.path)
@@ -67,7 +67,7 @@ module UsersHelper
     { "code" => auth_code,
       "client_id" => "184834102114.apps.googleusercontent.com",
       "client_secret" => "YJg8t7S_yDSCJsvnPnsS0U3k",
-      "redirect_uri" => "http://localhost:3000/codecallback",
+      "redirect_uri" => "http://#{request.host_with_port}/codecallback",
       "grant_type" => "authorization_code"
     }
   end
